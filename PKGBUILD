@@ -24,7 +24,7 @@ arch=('x86_64')
 url='https://github.com/houdert6/xdg-desktop-portal-nvim'
 license=('GPL-3.0-or-later')
 depends=('xdg-desktop-portal')
-makedepends=('git', 'cargo')
+makedepends=('git' 'cargo')
 provides=('xdg-desktop-portal-impl')
 source=('git+https://github.com/houdert6/xdg-desktop-portal-nvim.git')
 
@@ -35,8 +35,8 @@ build() {
 
 package() {
     cd 'xdg-desktop-portal-nvim'
-    install -Dm755 'target/release/xdg-desktop-portal-nvim' '$pkgdir/usr/lib/xdg-desktop-portal-nvim'
-    install -Dm644 'configs/nvim.portal' '$pkgdir/usr/share/xdg-desktop-portal/portals/nvim.portal'
-    install -Dm644 'configs/xdg-desktop-portal-nvim.service' '$pkgdir/usr/lib/systemd/user/xdg-desktop-portal-nvim.service'
-    install -Dm644 'configs/org.freedesktop.impl.portal.desktop.nvim.service' '$pkgdir/usr/share/dbus-1/services/org.freedesktop.impl.portal.desktop.nvim.service'
+    install -Dm755 'target/release/xdg-desktop-portal-nvim' "$pkgdir/usr/lib/xdg-desktop-portal-nvim"
+    install -Dm644 'configs/nvim.portal' "$pkgdir/usr/share/xdg-desktop-portal/portals/nvim.portal"
+    install -Dm644 'configs/xdg-desktop-portal-nvim.service' "$pkgdir/usr/lib/systemd/user/xdg-desktop-portal-nvim.service"
+    install -Dm644 'configs/org.freedesktop.impl.portal.desktop.nvim.service' "$pkgdir/usr/share/dbus-1/services/org.freedesktop.impl.portal.desktop.nvim.service"
 }
